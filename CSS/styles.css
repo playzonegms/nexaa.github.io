@@ -213,7 +213,7 @@ nav .btn-topbar:hover {
 .sidebar {
   position: fixed;
   top: 0;
-  left: -250px;
+  left: -350px;
   height: 100%;
   width: 250px;
   background-color: var(--gris);
