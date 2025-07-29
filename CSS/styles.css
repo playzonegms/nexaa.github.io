@@ -15,6 +15,112 @@ body {
   overflow-x: hidden;
 }
 
+.hero-section {
+  background: linear-gradient(135deg, #7a00ff 0%, #bc34ff 100%);
+  color: white;
+  padding: 6rem 2rem 5rem;
+  box-shadow: 0 10px 30px rgba(123, 0, 255, 0.3);
+  border-radius: 0 0 40px 40px;
+  margin-top: 60px;
+}
+
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1 1 500px;
+  text-align: left;
+}
+
+.hero-text h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-bottom: 0.4rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  line-height: 1.1;
+}
+
+.hero-text p {
+  font-size: 1.4rem;
+  margin-bottom: 2.5rem;
+  font-weight: 600;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1.8rem;
+  flex-wrap: wrap;
+}
+
+.hero-buttons a {
+  display: inline-block;
+  padding: 1.2rem 3rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(123, 0, 255, 0.3);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #9a3fff;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #7a00ff;
+  box-shadow: 0 12px 30px rgba(123, 0, 255, 0.6);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 3px solid white;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: white;
+  color: #7a00ff;
+  box-shadow: 0 12px 30px rgba(123, 0, 255, 0.6);
+}
+
+.hero-image {
+  flex: 0 0 180px;
+  max-width: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(123, 0, 255, 0.5);
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 50%;
+}
+
+/* Sección separadora debajo del hero */
+.hero-bottom-separator {
+  padding: 2rem 1rem;
+  color: #ccc;
+  font-size: 1.2rem;
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto 3rem;
+  border-radius: 15px;
+}
+
 /* Header full width pero contenido centrado y limitado */
 header {
   backdrop-filter: blur(8px);
@@ -72,6 +178,29 @@ nav a {
 nav a:hover {
   color: var(--violeta);
 }
+
+/* Estilo para el botón en la topbar */
+nav .btn-topbar {
+  display: inline-block;
+  padding: 0.5rem 1.8rem;
+  margin-left: 1rem;
+  border-radius: 40px;
+  border: 2.5px solid #8a2be2;
+  color: #8a2be2;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  white-space: nowrap;
+}
+
+nav .btn-topbar:hover {
+  background-color: rgba(138, 43, 226, 0.15); /* ligeramente violeta traslúcido */
+  border-color: white; /* violeta */
+  color: white;
+}
+
 
 .menu-toggle {
   display: none;
@@ -206,6 +335,35 @@ nav a:hover {
   font-size: 1rem;
 }
 
+.explore-nexa-box {
+  background-color: var(--gris);
+  padding: 3rem 1.5rem;
+  max-width: 100vw;
+  margin: 4rem 0 3rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
+  text-align: center;
+  user-select: none;
+}
+
+.explore-nexa-box h2 {
+  font-size: 2.8rem;
+  background: var(--gradiente);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+  font-weight: 900;
+}
+
+.explore-nexa-box p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #ccc;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
 footer {
   margin-top: 5rem;
   padding: 2rem 1rem;
@@ -234,6 +392,398 @@ footer .links a:hover {
   color: var(--violeta);
 }
 
+.top5-dinero-section {
+  max-width: 1000px;
+  margin: 3rem auto 4rem;
+  padding: 2rem 1rem;
+  background-color: var(--gris);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(138, 43, 226, 0.4);
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.top5-text {
+  flex: 1 1 350px;
+  color: #ddd;
+}
+
+.top5-text h2 {
+  font-size: 2rem;
+  color: var(--violeta);
+  margin-bottom: 0.6rem;
+  font-weight: 700;
+}
+
+.top5-text p {
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+.top5-table {
+  flex: 1 1 500px;
+  border-collapse: collapse;
+  width: 100%;
+  box-shadow: 0 0 12px rgba(0,0,0,0.3);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.top5-table thead {
+  background: var(--violeta);
+  color: white;
+}
+
+.top5-table th,
+.top5-table td {
+  padding: 0.75rem 1rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.top5-table tbody tr:nth-child(odd) {
+  background-color: #2a2a33;
+}
+
+.top5-table tbody tr:hover {
+  background-color: #3b2a85;
+  color: white;
+  cursor: default;
+}
+
+.welcome-message-section {
+  max-width: 1000px;
+  margin: 3rem auto 6rem;
+  padding: 2rem 1rem;
+  background-color: var(--gris);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(138, 43, 226, 0.4);
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.welcome-text {
+  flex: 1 1 350px;
+  color: #ddd;
+}
+
+.welcome-text h2 {
+  font-size: 2rem;
+  color: var(--violeta);
+  margin-bottom: 0.6rem;
+  font-weight: 700;
+}
+
+.welcome-text p {
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+.welcome-embed {
+  flex: 1 1 500px;
+  background-color: #2f3136; /* Discord embed dark bg */
+  border-radius: 12px;
+  color: #dcddde; /* Discord text color */
+  font-weight: 600;
+  font-size: 1.1rem;
+  box-shadow: inset 0 0 12px rgba(138, 43, 226, 0.6);
+  padding: 1rem 1.5rem 1.5rem;
+  user-select: none;
+}
+
+.embed-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.embed-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--violeta);
+  box-shadow: 0 0 8px var(--violeta);
+}
+
+.embed-author {
+  font-weight: 700;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.embed-content {
+  line-height: 1.4;
+}
+
+.mention {
+  color: var(--violeta); /* Discord mention blue */
+  font-weight: 700;
+}
+
+.moderation-section {
+  max-width: 1000px;
+  margin: 3rem auto 6rem;
+  padding: 2rem 1rem;
+  background-color: var(--gris);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(138, 43, 226, 0.4);
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  position: relative;
+  user-select: none;
+}
+
+.moderation-example {
+  flex: 1 1 450px;
+  background-color: #2f3136; /* Discord dark background */
+  border-radius: 12px;
+  box-shadow: inset 0 0 12px rgba(138, 43, 226, 0.6);
+  padding: 1rem 1.5rem;
+  color: #dcddde;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.mod-box {
+  background-color: #36393f;
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.mod-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+  color: var(--violeta);
+}
+
+.mod-title {
+  user-select: text;
+}
+
+.mod-timestamp {
+  color: #999;
+  font-weight: 400;
+  user-select: text;
+}
+
+.mod-content p {
+  margin: 0.3rem 0;
+  user-select: text;
+}
+
+.moderation-info {
+  flex: 1 1 350px;
+  color: #ddd;
+  position: relative;
+  padding-right: 2.5rem;
+}
+
+.moderation-info h2 {
+  font-size: 2rem;
+  color: var(--violeta);
+  margin-bottom: 0.6rem;
+  font-weight: 700;
+}
+
+.moderation-info p {
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+/* Los tres puntos arriba a la derecha dentro de moderación */
+.more-options {
+  position: absolute;
+  top: 1.8rem;
+  right: 1rem;
+  font-size: 1.8rem;
+  color: #777;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+.more-options:hover {
+  color: var(--violeta);
+}
+
+.wiki-section {
+  background-color: var(--gris);
+  border-radius: 20px;
+  max-width: 1200px;
+  margin: 4rem auto 6rem;
+  padding: 3rem 2rem;
+  box-shadow: 0 8px 30px rgba(138, 43, 226, 0.35);
+  color: #ddd;
+  user-select: none;
+}
+
+.wiki-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.wiki-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.wiki-text h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--violeta);
+  margin-bottom: 0.2rem;
+}
+
+.wiki-text p {
+  font-size: 1.25rem;
+  color: #bbb;
+  max-width: 600px;
+}
+
+.wiki-cards {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.wiki-card {
+  background-color: #2f3136;
+  flex: 1 1 250px;
+  padding: 1.3rem 1.5rem;
+  border-radius: 15px;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  box-shadow: inset 0 0 12px rgba(138, 43, 226, 0.5);
+  transition: background-color 0.3s ease;
+  cursor: default;
+}
+
+.wiki-card:hover {
+  background-color: #40444b;
+}
+
+.wiki-card .icon {
+  font-size: 2.8rem;
+  line-height: 1;
+  user-select: none;
+  color: var(--violeta);
+  flex-shrink: 0;
+  margin-top: 0.3rem;
+}
+
+.wiki-card h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: white;
+}
+
+.wiki-card p {
+  margin: 0.2rem 0 0;
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.3;
+}
+
+.wiki-text > button {
+  margin-top: 2rem;
+  max-width: 180px;
+  padding: 0.9rem 2.2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 50px;
+  border: 3px solid var(--violeta);
+  background-color: transparent;
+  color: var(--violeta);
+  cursor: not-allowed;
+  user-select: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.wiki-text > button:hover:not(:disabled) {
+  background-color: var(--violeta);
+  color: white;
+  cursor: pointer;
+}
+
+.addbot-section {
+  max-width: 1200px;
+  margin: 5rem auto 6rem;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+  position: relative;
+}
+
+.addbot-section h2 {
+  font-size: 2.8rem;
+  font-weight: 900;
+  background: linear-gradient(90deg, #8a2be2, #a64bf4, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+  user-select: text;
+  position: relative;
+  /* Línea decorativa debajo */
+}
+
+.addbot-section h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #8a2be2, #a64bf4, #c084fc);
+  border-radius: 2px;
+}
+
+.btn-outline {
+  padding: 1rem 2.8rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--violeta);
+  border: 2px solid rgba(138, 43, 226, 0.5);
+  border-radius: 50px;
+  background: transparent;
+  text-decoration: none;
+  transition: border-color 0.3s ease, color 0.3s ease;
+  user-select: none;
+}
+
+.btn-outline:hover {
+  border-color: var(--violeta);
+  color: var(--violeta);
+  background: transparent;
+  cursor: pointer;
+}
+
+.separator {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--violeta), transparent);
+  margin: 3rem 0;
+  opacity: 0.6;
+}
+
+
 @media (max-width: 768px) {
   header {
     padding: 0.8rem 0.8rem; /* menos padding aún en móviles */
@@ -243,5 +793,67 @@ footer .links a:hover {
   }
   .menu-toggle {
     display: block;
+  }
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .hero-text {
+    flex: unset;
+    margin-bottom: 2rem;
+  }
+  .hero-image {
+    max-width: 140px;
+  }
+  .hero-text h1 {
+    font-size: 2.8rem;
+  }
+  .hero-text p {
+    font-size: 1.1rem;
+  }
+  .hero-buttons a {
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+  }
+  .top5-dinero-section {
+    flex-direction: column;
+  }
+  .top5-text, .top5-table {
+    flex: 1 1 100%;
+  }
+  .welcome-message-section {
+    flex-direction: column;
+  }
+  .welcome-text, .welcome-embed {
+    flex: 1 1 100%;
+  }
+  .moderation-section {
+    flex-direction: column;
+  }
+  .moderation-example, .moderation-info {
+    flex: 1 1 100%;
+    padding-right: 0;
+  }
+  .more-options {
+    position: static;
+    margin-top: 1rem;
+    text-align: right;
+    font-size: 2rem;
+  }
+  .wiki-cards {
+    flex-direction: column;
+  }
+  .wiki-card {
+    flex: 1 1 100%;
+  }
+  .addbot-section {
+    flex-direction: column;
+    gap: 1.8rem;
+    text-align: center;
+  }
+  .addbot-section h2::after {
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
