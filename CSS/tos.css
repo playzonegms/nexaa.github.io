@@ -16,7 +16,7 @@ body {
   line-height: 1.6;
 }
 
-/* Header full width, contenido centrado, padding 0 0rem */
+/* Header full width, contenido centrado, padding 0 horizontal */
 header {
   backdrop-filter: blur(8px);
   background-color: rgba(14,14,17,0.8);
@@ -116,15 +116,22 @@ nav a:hover {
   }
 }
 
-/* Main contenido */
+/* Contenedor principal mejorado */
 .tos-container {
   max-width: 900px;
   margin: 6rem auto 4rem;
-  padding: 0 1.5rem;
-  background: var(--gris);
-  border-radius: 1rem;
-  box-shadow: 0 4px 12px var(--sombra);
+  padding: 2.5rem 3rem;
+  background: rgba(26, 26, 29, 0.75);
+  border-radius: 1.5rem;
+  box-shadow:
+    0 8px 24px rgba(138, 43, 226, 0.3),
+    0 0 60px rgba(166, 75, 244, 0.2);
+  backdrop-filter: blur(15px);
   color: #ddd;
+  border: 2px solid;
+  border-image-slice: 1;
+  border-width: 2px;
+  border-image-source: linear-gradient(90deg, #8a2be2, #a64bf4, #c084fc);
 }
 
 .tos-container h1 {
@@ -132,6 +139,7 @@ nav a:hover {
   margin-bottom: 1.5rem;
   color: var(--violeta);
   text-align: center;
+  text-shadow: 0 0 5px rgba(138,43,226,0.8);
 }
 
 .tos-container section {
@@ -142,17 +150,22 @@ nav a:hover {
   font-size: 1.8rem;
   margin-bottom: 0.8rem;
   color: var(--violeta);
+  text-shadow: 0 0 3px rgba(138,43,226,0.7);
+  border-left: 4px solid var(--violeta);
+  padding-left: 0.8rem;
 }
 
 .tos-container p {
   font-size: 1.1rem;
-  line-height: 1.5;
+  line-height: 1.6;
   color: #ccc;
+  text-align: justify;
 }
 
 .tos-container a {
   color: var(--violeta);
   text-decoration: underline;
+  transition: color 0.3s;
 }
 
 .tos-container a:hover {
@@ -201,6 +214,10 @@ footer .links a:hover {
   }
   .tos-container {
     margin: 5rem 1rem 2rem;
-    padding: 1rem;
+    padding: 1.5rem 1.5rem;
+    border-radius: 1rem;
+    box-shadow:
+      0 6px 20px rgba(138, 43, 226, 0.3),
+      0 0 40px rgba(166, 75, 244, 0.2);
   }
 }
