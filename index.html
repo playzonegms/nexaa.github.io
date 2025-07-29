@@ -4,6 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nexa - Tu Bot de Discord</title>
+  
+  <!-- META para compartir -->
+  <meta property="og:title" content="Nexa - Tu Bot de Discord">
+  <meta property="og:description" content="Un bot de Discord multifuncional para moderación, entretenimiento y más.">
+  <meta property="og:image" content="Img/logo.jpg">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#8a2be2">
+
+  <!-- Favicon -->
+  <link rel="icon" href="Img/logo.jpg" type="image/jpg">
+
   <style>
     :root {
       --violeta: #8a2be2;
@@ -57,6 +68,32 @@
 
     nav a:hover {
       color: var(--violeta);
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--text);
+    }
+
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      background-color: var(--gris);
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 200px;
+      padding: 1rem;
+      box-shadow: 0 4px 10px var(--sombra);
+    }
+
+    .mobile-menu a {
+      color: var(--text);
+      text-decoration: none;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #333;
     }
 
     .section {
@@ -177,9 +214,17 @@
       color: var(--violeta);
     }
 
-    @media(max-width: 600px) {
+    @media(max-width: 768px) {
       nav {
         display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .mobile-menu {
+        display: flex;
       }
     }
   </style>
@@ -188,11 +233,17 @@
 
   <header>
     <div class="logo">Nexa</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     <nav>
       <a href="#">Inicio</a>
       <a href="#">Características</a>
       <a href="#">Comunidad</a>
     </nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#">Inicio</a>
+      <a href="#">Características</a>
+      <a href="#">Comunidad</a>
+    </div>
   </header>
 
   <div class="section">
@@ -256,7 +307,10 @@
   </footer>
 
   <script>
-    // Aquí puedes incluir lógica JS futura si deseas
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    }
   </script>
 
 </body>
