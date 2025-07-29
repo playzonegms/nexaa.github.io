@@ -513,7 +513,7 @@ footer .links a:hover {
 
 .embed-author {
   font-weight: 700;
-  color: white;
+  color: var(--violeta);
   font-size: 1.2rem;
 }
 
