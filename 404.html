@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>404 | Nexa</title>
+  <meta name="description" content="Error 404 - Pagina no encontrada." />
+  <meta property="og:title" content="404 - Nexa" />
+  <meta property="og:description" content="Error 404 - Pagina no encontrada." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="Img/logo.jpg" />
+  <link rel="stylesheet" href="CSS/styles.css" />
+  <link rel="icon" href="Img/logo.jpg" type="image/jpg" />
+  <style>
+    /* Estilos específicos para la página 404 */
+    main.error-page {
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem 1rem;
+      color: var(--text);
+    }
+
+    main.error-page h1 {
+      font-size: 7rem;
+      font-weight: 900;
+      color: var(--violeta);
+      margin: 0 0 1rem;
+    }
+
+    main.error-page h2 {
+      font-size: 2rem;
+      margin: 0 0 1.5rem;
+      color: #ccc;
+    }
+
+    main.error-page p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      max-width: 400px;
+      color: #bbb;
+    }
+
+    main.error-page a.btn-back {
+      padding: 1rem 2.5rem;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: white;
+      background-color: var(--violeta);
+      border-radius: 40px;
+      text-decoration: none;
+      box-shadow: 0 6px 15px rgba(138, 43, 226, 0.6);
+      transition: background-color 0.3s ease;
+      user-select: none;
+    }
+
+    main.error-page a.btn-back:hover {
+      background-color: #6f1bc9;
+    }
+
+    /* Ajuste para que el contenido no quede debajo del header fijo */
+    main.error-page {
+      margin-top: 80px;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Menú lateral -->
+  <div class="sidebar" id="sidebar">
+    <a href="#">Inicio</a>
+    <a href="Features">Características</a>
+    <a href="Comunidad">Comunidad</a>
+  </div>
+
+  <!-- Topbar -->
+  <header>
+    <div class="header-content">
+      <div class="logo">Nexa</div>
+      <div class="menu-toggle" id="menuToggle">☰</div>
+      <nav>
+        <a href="#">Inicio</a>
+        <a href="Features">Características</a>
+        <a href="Comunidad">Comunidad</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="error-page">
+    <h1>404</h1>
+    <h2>Página no encontrada</h2>
+    <p>Lo sentimos, la página que buscas no existe o ha sido movida.</p>
+    <a href="/" class="btn-back">Volver al Inicio</a>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+  <style>
+    footer {
+      background-color: #111;
+      color: #ccc;
+      padding: 40px 60px 20px;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      max-width: 1200px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    /* Izquierda: logo + nombre + botones */
+    .footer-left {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+      min-width: 250px;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .footer-logo img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .footer-logo h1 {
+      margin: 0;
+      font-size: 2rem;
+      font-weight: 900;
+      color: #8a2be2; /* violeta */
+      user-select: none;
+    }
+
+    .footer-buttons {
+      display: flex;
+      gap: 12px;
+    }
+
+    .footer-buttons a {
+      padding: 10px 20px;
+      border-radius: 30px;
+      border: 2px solid #8a2be2;
+      background: transparent;
+      color: #8a2be2;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: background-color 0.3s, color 0.3s;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .footer-buttons a:hover {
+      background-color: #8a2be2;
+      color: #111;
+    }
+
+    /* Derecha: 3 columnas compactas */
+    .footer-links {
+      display: flex;
+      gap: 50px;
+      justify-content: flex-end;
+      flex: 1;
+      flex-wrap: wrap;
+      min-width: 300px;
+    }
+
+    .footer-column {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      text-align: right;
+      min-width: 120px;
+    }
+
+    .footer-column h4 {
+      margin: 0 0 8px 0;
+      color: #888;
+      font-weight: 600;
+      font-size: 1rem;
+      user-select: none;
+    }
+
+    .footer-column a {
+      color: #bbb;
+      text-decoration: none;
+      font-size: 0.875rem;
+      user-select: text;
+      transition: color 0.3s;
+    }
+
+    .footer-column a:hover {
+      color: #8a2be2;
+    }
+
+    /* Separador */
+    .footer-separator {
+      margin: 30px auto 15px;
+      width: 90%;
+      height: 1px;
+      background-color: #222;
+      border-radius: 1px;
+    }
+
+    /* Copyright */
+    .footer-copy {
+      text-align: center;
+      color: #555;
+      font-size: 0.85rem;
+      user-select: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .footer-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+      }
+
+      .footer-left {
+        align-items: center;
+        text-align: center;
+      }
+
+      .footer-links {
+        justify-content: center;
+        gap: 40px;
+      }
+
+      .footer-column {
+        text-align: center;
+        min-width: auto;
+      }
+    }
+  </style>
+
+  <div class="footer-container">
+    <div class="footer-left">
+      <div class="footer-logo">
+        <img src="https://cdhub.store/Img/logo.jpg" alt="Logo Nexa" />
+        <h1>Nexa</h1>
+      </div>
+      <div class="footer-buttons">
+        <a href="https://discord.com/oauth2/authorize?client_id=1399519289664471070&permissions=8&integration_type=0&scope=bot">Añadir Bot</a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <div class="footer-column">
+        <h4>Recursos</h4>
+        <a href="#">Próximamente</a>
+      </div>
+      <div class="footer-column">
+        <h4>Nexa</h4>
+        <a href="https://cdhub.store/Contacto">Contacto</a>
+        <a href="https://discord.gg/hYPMjV4Zrd">Servidor</a>
+      </div>
+      <div class="footer-column">
+        <h4>Legal</h4>
+        <a href="https://cdhub.store/Terminos-y-Condiciones">Términos</a>
+        <a href="https://cdhub.store/Politicas-de-Privacidad">Privacidad</a>
+        <a href="https://cdhub.store/Licencias">Licencias</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-separator"></div>
+
+  <div class="footer-copy">
+    © 2025 Nexa. Todos los derechos reservados.
+  </div>
+</footer>
+
+  <script src="JS/menu.js"></script>
+</body>
+</html>
