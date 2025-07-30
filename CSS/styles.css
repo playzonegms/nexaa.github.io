@@ -396,103 +396,148 @@ footer .links a:hover {
   max-width: 1000px;
   margin: 3rem auto 4rem;
   padding: 2rem 1rem;
-  background-color: var(--gris);
-  border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(138, 43, 226, 0.4);
+  background: linear-gradient(to bottom right, #1e1e2f, #2d2d44);
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(138, 43, 226, 0.4);
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;
   align-items: center;
+  transition: 0.3s ease-in-out;
 }
 
 .top5-text {
   flex: 1 1 350px;
-  color: #ddd;
+  color: #f0f0f0;
 }
 
 .top5-text h2 {
   font-size: 2rem;
   color: var(--violeta);
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.5rem;
   font-weight: 700;
 }
 
 .top5-text p {
-  font-size: 1.1rem;
-  line-height: 1.4;
+  font-size: 1.05rem;
+  opacity: 0.9;
+  line-height: 1.5;
 }
 
 .top5-table {
   flex: 1 1 500px;
-  border-collapse: collapse;
   width: 100%;
-  box-shadow: 0 0 12px rgba(0,0,0,0.3);
-  border-radius: 12px;
+  border-collapse: collapse;
   overflow: hidden;
+  border-radius: 14px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  background-color: #222;
+  transition: all 0.3s ease;
 }
 
 .top5-table thead {
   background: var(--violeta);
   color: white;
+  text-transform: uppercase;
+  font-size: 0.9rem;
 }
 
 .top5-table th,
 .top5-table td {
-  padding: 0.75rem 1rem;
+  padding: 0.9rem 1.2rem;
   text-align: center;
   font-weight: 600;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.top5-table tbody tr {
+  border-bottom: 1px solid #333;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.top5-table tbody tr:hover {
+  background-color: #3b2a85;
+  transform: scale(1.02);
+  color: #fff;
+  cursor: pointer;
 }
 
 .top5-table tbody tr:nth-child(odd) {
   background-color: #2a2a33;
 }
 
-.top5-table tbody tr:hover {
-  background-color: #3b2a85;
-  color: white;
-  cursor: default;
+.top5-table tbody tr:nth-child(even) {
+  background-color: #1f1f27;
+}
+
+.top5-table .top1 {
+  background: linear-gradient(to right, #ffdd00, #ffaa00);
+  color: #000;
+  font-weight: bold;
+}
+
+.top5-table .top2 {
+  background: linear-gradient(to right, #c0c0c0, #a9a9a9);
+  color: #000;
+  font-weight: bold;
+}
+
+.top5-table .top3 {
+  background: linear-gradient(to right, #cd7f32, #a0522d);
+  color: #fff;
+  font-weight: bold;
 }
 
 .welcome-message-section {
   max-width: 1000px;
   margin: 3rem auto 6rem;
   padding: 2rem 1rem;
-  background-color: var(--gris);
+  background: linear-gradient(to bottom right, #1e1e2f, #2d2d44); /* fondo con transparencia */
   border-radius: 15px;
   box-shadow: 0 4px 20px rgba(138, 43, 226, 0.4);
+  backdrop-filter: blur(8px);
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;
   align-items: center;
 }
 
+
 .welcome-text {
   flex: 1 1 350px;
   color: #ddd;
+  transition: color 0.3s ease;
 }
 
 .welcome-text h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: var(--violeta);
   margin-bottom: 0.6rem;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .welcome-text p {
   font-size: 1.1rem;
-  line-height: 1.4;
+  line-height: 1.6;
+  opacity: 0.9;
 }
 
 .welcome-embed {
   flex: 1 1 500px;
-  background-color: #2f3136; /* Discord embed dark bg */
-  border-radius: 12px;
-  color: #dcddde; /* Discord text color */
+  background-color: #2f3136;
+  border-radius: 15px;
+  color: #dcddde;
   font-weight: 600;
   font-size: 1.1rem;
-  box-shadow: inset 0 0 12px rgba(138, 43, 226, 0.6);
-  padding: 1rem 1.5rem 1.5rem;
+  box-shadow: inset 0 0 15px rgba(138, 43, 226, 0.6), 0 0 20px rgba(138, 43, 226, 0.1);
+  padding: 1.5rem 2rem;
   user-select: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.welcome-embed:hover {
+  transform: scale(1.025);
+  box-shadow: 0 0 30px rgba(138, 43, 226, 0.5), inset 0 0 20px rgba(138, 43, 226, 0.4);
 }
 
 .embed-header {
@@ -503,60 +548,85 @@ footer .links a:hover {
 }
 
 .embed-avatar {
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--violeta);
-  box-shadow: 0 0 8px var(--violeta);
+  box-shadow: 0 0 10px var(--violeta);
+  transition: box-shadow 0.3s ease;
 }
 
 .embed-author {
   font-weight: 700;
   color: var(--violeta);
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 .embed-content {
-  line-height: 1.4;
+  line-height: 1.5;
+  font-size: 1.05rem;
 }
 
 .mention {
-  color: var(--violeta); /* Discord mention blue */
+  color: var(--violeta);
   font-weight: 700;
+  transition: color 0.3s ease;
 }
+
+@media (max-width: 768px) {
+  .welcome-message-section {
+    flex-direction: column-reverse;
+    padding: 1.5rem 1rem;
+  }
+
+  .welcome-embed, .welcome-text {
+    flex: 1 1 100%;
+  }
+}
+
 
 .moderation-section {
   max-width: 1000px;
   margin: 3rem auto 6rem;
-  padding: 2rem 1rem;
-  background-color: var(--gris);
-  border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(138, 43, 226, 0.4);
+  padding: 2rem 1.5rem;
+  background: linear-gradient(to bottom right, #1e1e2f, #2d2d44);
+  border-radius: 18px;
+  box-shadow: 0 8px 28px rgba(138, 43, 226, 0.35);
   display: flex;
   gap: 2rem;
   align-items: flex-start;
   position: relative;
-  user-select: none;
+  transition: 0.3s ease;
 }
 
 .moderation-example {
   flex: 1 1 450px;
-  background-color: #2f3136; /* Discord dark background */
-  border-radius: 12px;
-  box-shadow: inset 0 0 12px rgba(138, 43, 226, 0.6);
-  padding: 1rem 1.5rem;
+  background-color: #2f3136;
+  border-radius: 14px;
+  box-shadow: inset 0 0 14px rgba(138, 43, 226, 0.6);
+  padding: 1.2rem 1.6rem;
   color: #dcddde;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 600;
   font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.moderation-example:hover {
+  transform: scale(1.015);
 }
 
 .mod-box {
   background-color: #36393f;
-  border-radius: 10px;
-  padding: 1rem 1.2rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  border-radius: 12px;
+  padding: 1rem 1.3rem;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.45);
+  transition: background-color 0.3s ease;
+}
+
+.mod-box:hover {
+  background-color: #3d4047;
 }
 
 .mod-header {
@@ -579,8 +649,13 @@ footer .links a:hover {
 }
 
 .mod-content p {
-  margin: 0.3rem 0;
+  margin: 0.35rem 0;
   user-select: text;
+  transition: color 0.3s ease;
+}
+
+.mod-content p:hover {
+  color: var(--violeta);
 }
 
 .moderation-info {
@@ -588,6 +663,19 @@ footer .links a:hover {
   color: #ddd;
   position: relative;
   padding-right: 2.5rem;
+  animation: fadeUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .moderation-info h2 {
@@ -602,7 +690,6 @@ footer .links a:hover {
   line-height: 1.4;
 }
 
-/* Los tres puntos arriba a la derecha dentro de moderación */
 .more-options {
   position: absolute;
   top: 1.8rem;
@@ -611,15 +698,17 @@ footer .links a:hover {
   color: #777;
   cursor: pointer;
   user-select: none;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .more-options:hover {
   color: var(--violeta);
+  transform: rotate(90deg);
 }
 
+
 .wiki-section {
-  background-color: var(--gris);
+  background: linear-gradient(to bottom right, #1e1e2f, #2d2d44);
   border-radius: 20px;
   max-width: 1200px;
   margin: 4rem auto 6rem;
