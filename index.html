@@ -36,7 +36,7 @@
   </div>
 </header>
 
-   <main class="hero-section">
+   <main class="hero-section" data-animate>
   <div class="hero-content">
     <div class="hero-text">
       <h1>Bienvenido a Nexa</h1>
@@ -52,46 +52,46 @@
   </div>
 </main>
 
-<section class="hero-bottom-separator">
+<section class="hero-bottom-separator" data-animate>
   <p>Gestiona tu servidor con Nexa y mejora la experiencia de tu comunidad.</p>
 </section>
 
-  <div class="section stats">
-    <div class="card">
+  <div class="section stats" >
+    <div class="card" data-animate>
       <h2>+100</h2>
       <p>Servidores usando Nexa</p>
     </div>
-    <div class="card">
+    <div class="card" data-animate>
       <h2>+25K</h2>
       <p>Usuarios activos</p>
     </div>
-    <div class="card">
+    <div class="card" data-animate>
       <h2>99.99%</h2>
       <p>Uptime garantizado</p>
     </div>
   </div>
 
   <div class="section features">
-    <div class="card">
+    <div class="card" data-animate>
       <h3>Moderación Avanzada</h3>
       <p>Comandos como ban, mute, kick, logs y más para mantener la paz.</p>
     </div>
-    <div class="card">
+    <div class="card" data-animate>
       <h3>Bienvenidas & Logs</h3>
       <p>Personaliza mensajes de bienvenida y registros de actividad.</p>
     </div>
-    <div class="card">
+    <div class="card" data-animate>
       <h3>Sistema Global</h3>
       <p>Configuraciones únicas por servidor, con control total desde web y bot.</p>
     </div>
   </div>
 
- <section class="explore-nexa-box">
+ <section class="explore-nexa-box" data-animate>
   <h2>¡Explora Nexa y transforma tu servidor!</h2>
   <p>Gestiona todo desde un solo bot, ahorra tiempo y brinda una mejor experiencia a tus miembros. Nexa evoluciona contigo.</p>
 </section>
 
-<section class="welcome-message-section">
+<section class="welcome-message-section" data-animate>
   <div class="welcome-embed">
     <div class="embed-header">
       <img class="embed-avatar" src="Img/logo.jpg" alt="NexaBot Logo" />
@@ -108,7 +108,7 @@
 </section>
 
 
-<section class="top5-dinero-section">
+<section class="top5-dinero-section" data-animate>
   <div class="top5-text">
     <h2>Top 5 Usuarios con Más Dinero</h2>
     <p>Descubre quiénes lideran la economía del servidor. ¡Compite, gana y alcanza la cima!</p>
@@ -131,7 +131,7 @@
   </table>
 </section>
 
-<section class="moderation-section">
+<section class="moderation-section" data-animate>
   <div class="moderation-example">
     <div class="mod-box">
       <div class="mod-header">
@@ -155,7 +155,7 @@
 
 
 
-<section class="wiki-section">
+<section class="wiki-section" data-animate>
   <div class="wiki-content">
     <div class="wiki-text">
       <h2>Wiki Oficial de Nexa</h2>
@@ -190,7 +190,7 @@
 
 <hr class="separator" />
 
-<section class="addbot-section">
+<section class="addbot-section" data-animate>
   <h2>Añade Nexa a tu servidor y comienza hoy con tu Aventura</h2>
   <a href="https://discord.com/oauth2/authorize?client_id=1399519289664471070&permissions=8&integration_type=0&scope=bot" class="btn-outline">Añadir Bot</a>
 </section>
@@ -349,7 +349,7 @@
     }
   </style>
 
-  <div class="footer-container">
+  <div class="footer-container" data-animate>
     <div class="footer-left">
       <div class="footer-logo">
         <img src="https://cdhub.store/Img/logo.jpg" alt="Logo Nexa" />
@@ -388,5 +388,20 @@
 
 
   <script src="JS/menu.js"></script>
+  <script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.15
+  });
+
+  document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
+</script>
+
+
 </body>
 </html>
